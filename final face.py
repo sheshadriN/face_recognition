@@ -2,9 +2,10 @@ import cv2
 import numpy as np
 import face_recognition
 import os 
+import time
 from datetime import datetime
 
-path = 'facereg\imgsample'
+path = 'imgsample'
 images = []
 classnames = []
 mylist = os.listdir(path)
@@ -27,7 +28,7 @@ def findencodings(images):
 
 def attendance(name):
     sd="IN"
-    with open('facereg\attendance_1.csv','r+') as f:
+    with open('attendance_1.csv','r+') as f:
         
 
 
@@ -42,6 +43,7 @@ def attendance(name):
             datestring = now.strftime("%H:%M:%S")
             
             f.writelines(f'\n {name},{datestring}')
+            time.sleep(60)
 
 
 encodelistknown = findencodings(images)

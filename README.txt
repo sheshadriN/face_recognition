@@ -13,8 +13,15 @@ python -m venv venv
 pip install -r requirement.txt
 
 '''
+To set New face to the data set
 To Run face.py
 '''
 
 python face.py
 
+
+'''
+To get the attendance for every 60 delay seconds 
+to run final face.py
+'''
+python '.\final face.py'
